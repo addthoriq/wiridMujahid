@@ -1,62 +1,62 @@
 [
     {
-        "id":"01",
+        "id":"1",
         "judul":"Doa Memohon Pertolongan",
         "arab":"رَبَّنَا أَعِنَّا وَلَا تُعِنْ عَلَيْنَا، وَانْصُرْنَا وَلَا تَنْصُرْ عَلَيْنَا، وَامْكُرْ لَنَا وَلَا تَمْكُرْ عَلَيْنَا، وَاهْدِنَا وَيَسِّرْ هُدَاى إِلَيْنَا، وَانْصُرْنَا عَلَى مَنْ بَغَى عَلَيْنَا",
         "arti":"Wahai Rabb kami, bantulah kami (dalam menghadapi musuh) dan Janganlah Engkau bantu mereka dalam menghadapi kami. Tolonglah kami (dalam menghadapi mereka) dan Janganlah Engkau tolong mereka dalam menghadapi kami. Tunjukkan kami jalan untuk mengusir musuh dan Janganlah Engkau tunjukkan mereka jalan untuk mempertahankan diri. Berilah kami petunjuk dan mudahkanlah kami untuk mengikuti petunjuk itu. Tolonglah kami atas orang-orang yang telah menzhalimi kami.",
         "dalil":"(HR. Abu Dawud no. 1510, At Tirmidzi no. 3551, Ibnu Majah no. 3830)",
     },
     {
-        "id":"02",
+        "id":"2",
         "judul":"Ketika bertemu Musuh",
         "arab":"رَبَّنَآ اَفْرِغْ عَلَيْنَا صَبْرًا وَّثَبِّتْ اَقْدَامَنَا وَانْصُرْنَا عَلَى الْقَوْمِ الْكٰفِرِيْنَ",
         "arti":"Wahai Rabb kami, Limpahkanlah kesabaran kepada kami, dan Kokohkanlah langkah kami, dan Tolonglah kami menghadapi orang-orang kafir.",
         "dalil":"(QS. Al-Baqarah: 250)",
     },
     {
-        "id":"03",
+        "id":"3",
         "judul":"Ketika diteror Musuh",
         "arab":"حَسْبُنَا اللّٰهُ وَنِعْمَ الْوَكِيْلُ",
         "arti":"Cukuplah Allah (menjadi penolong) bagi kami dan Dia sebaik-baik pelindung.",
         "dalil":"(QS. Ali Imran: 173)",
     },
     {
-        "id":"04",
-        "judul":"Ketika diperdaya Musuh"
+        "id":"4",
+        "judul":"Ketika diperdaya Musuh",
         "arab":"وَاُفَوِّضُ اَمْرِيْٓ اِلَى اللّٰهِ ۗاِنَّ اللّٰهَ بَصِيْرٌ ۢبِالْعِبَادِ",
         "arti":"Dan aku menyerahkan urusanku kepada Allah. Sungguh, Allah Maha Melihat terhadap hamba-hamba-Nya.",
         "dalil":"(QS. Ghafir: 44)",
     },
     {
-        "id":"05",
+        "id":"5",
         "judul":"Ketika menjadi Buronan musuh untuk di Bunuh",
         "arab":" رَبِّ نَجِّنِيْ مِنَ الْقَوْمِ الظّٰلِمِيْنَ",
         "arti":"Ya Rabbku, selamatkanlah aku dari orang-orang yang zhalim itu.",
         "dalil":"(QS. Al-Qashash: 21)",
     },
     {
-        "id":"06",
+        "id":"6",
         "judul":"Ketika menuju suatu jalan atau bila Jalan menjadi Samar",
         "arab":"عَسٰى رَبِّيْٓ اَنْ يَّهْدِيَنِيْ سَوَاۤءَ السَّبِيْلِ",
         "arti":"Mudah-mudahan Tuhanku memimpin aku ke jalan yang benar.",
         "dalil":"(QS. Al-Qashash: 22)",
     },
     {
-        "id":"07",
+        "id":"7",
         "judul":"Ketika jumlah Musuh banyak dan Mujahidin sedikit serta Pertolongan tak kunjung datang",
         "arab":"كَمْ مِّنْ فِئَةٍ قَلِيْلَةٍ غَلَبَتْ فِئَةً كَثِيْرَةً ۢبِاِذْنِ اللّٰهِ ۗ وَاللّٰهُ مَعَ الصّٰبِرِيْنَ",
         "arti":"Betapa banyak kelompok kecil mengalahkan kelompok besar dengan izin Allah. Dan Allah beserta orang-orang yang sabar.",
         "dalil":"(QS. Al-Baqarah: 249)",
     },
     {
-        "id":"08",
+        "id":"8",
         "judul":"Ketika melihat sekelompok orang Kafir",
         "arab":"وَلَمَّا رَاَ الْمُؤْمِنُوْنَ الْاَحْزَابَ قَالُوْا هٰذَا مَا وَعَدَنَا اللّٰهُ وَرَسُوْلُهٗ وَصَدَقَ اللّٰهُ وَرَسُوْلُهٗ ۖوَمَا زَادَهُمْ اِلَّآ اِيْمَانًا وَّتَسْلِيْمًا",
         "arti":"Dan ketika orang-orang mukmin melihat golongan-golongan (yang bersekutu) itu, mereka berkata, “Inilah yang dijanjikan Allah dan Rasul-Nya kepada kita.” Dan benarlah Allah dan Rasul-Nya. Dan yang demikian itu menambah keimanan dan keislaman mereka.",
         "dalil":"(QS. Al-Ahzab: 22)",
     },
     {
-        "id":"09",
+        "id":"9",
         "judul":"Semboyan kaum Muslimin terhadap orang-orang Kafir yang mengatur siasat di Malam hari",
         "arab":"‏‏‏‏‏‏عَنْ الْمُهَلَّبِ بْنِ أَبِي صُفْرَةَ، ‏‏‏‏‏‏قَالَ:‏‏‏‏ أَخْبَرَنِي مَن سَمِعَ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ يَقُولُ:‏‏‏‏ إِنْ بُيِّتُّمْ فَلْيَكُنْ شِعَارُكُمْ حم لَا يُنْصَرُونَ",
         "arti":"Dari Al Muhallab bin Abi Shufrah, dari orang yang mendengar bahwa Nabi SAW bersabda “Jika musuh mengatur siasat untuk (menyerang) kalian di Malam hari. Maka ucapkanlah, ”Haa Miim, mereka tidak diberi pertolongan”.”",
@@ -198,8 +198,8 @@
     {
         "id":"29",
         "judul":"Senandung Mujahid",
-        "arab":"Ya Allah, kalau bukan karena Engkau niscaya kami tak mendapat petunjuk, tak bersedekah dan tidak pula shalat.\nKami senantiasa membutuhkan karunia-Mu. Sebagai balasan untuk-Mu, maafkanlah apa yang telah kami usahakan.\nKokohkanlah kaki kami ketika bertemu musuh, dan berikanlah kepada kami suatu ketenangan.\nBila semboyan berkumandang kami segera maju.\nOleh karena itu, bantulah kami dalam peperangan",
-        "arti":null,
+        "arab":null,
+        "arti":"Ya Allah, kalau bukan karena Engkau niscaya kami tak mendapat petunjuk, tak bersedekah dan tidak pula shalat.\nKami senantiasa membutuhkan karunia-Mu. Sebagai balasan untuk-Mu, maafkanlah apa yang telah kami usahakan.\nKokohkanlah kaki kami ketika bertemu musuh, dan berikanlah kepada kami suatu ketenangan.\nBila semboyan berkumandang kami segera maju.\nOleh karena itu, bantulah kami dalam peperangan",
         "dalil":"(HR. Bukhari no. 3960, 5796, 5972 dan Muslim no. 1802)",
     },
     {
@@ -222,5 +222,5 @@
         "arab":"اللَّهُمَّ إِنَّهُمْ حُفَاةٌ فَاحْمِلهُمْ، اللَّهُمَّ إِنَّهُمْ عُرَاةٌ فَاكْسُهُمْ، اللَّهُمَّ إِنَّهُمْ جِيَاعٌ فَأَشْبِعُهُمْ",
         "arti":"Ya Allah, sesungguhnya mereka bertelanjang kaki maka angkatlah mereka. Ya Allah, sesungguhnya mereka dalam keadaan bertelanjang pakaian maka berilah mereka pakaian. Ya Allah, sesungguhnya mereka dalam keadaan lapar maka kenyangkanlah mereka.",
         "dalil":"(HR. Abu Dawud no. 2747, Al Hakim no. 2596, 2642)",
-    },
+    }
 ]

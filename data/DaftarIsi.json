@@ -1,38 +1,38 @@
 [
     {
-        "id":"01",
+        "id":"1",
         "judul":"Doa Memohon Pertolongan",
     },
     {
-        "id":"02",
+        "id":"2",
         "judul":"Ketika bertemu Musuh",
     },
     {
-        "id":"03",
-        "judul":"Ketika diteror Musuh",
+        "id":"3",
+        "judul":"Ketika di teror Musuh",
     },
     {
-        "id":"04",
-        "judul":"Ketika diperdaya Musuh"
+        "id":"4",
+        "judul":"Ketika di perdaya Musuh"
     },
     {
-        "id":"05",
+        "id":"5",
         "judul":"Ketika menjadi Buronan musuh untuk di Bunuh",
     },
     {
-        "id":"06",
+        "id":"6",
         "judul":"Ketika menuju suatu jalan atau bila Jalan menjadi Samar",
     },
     {
-        "id":"07",
+        "id":"7",
         "judul":"Ketika jumlah Musuh banyak dan Mujahidin sedikit serta Pertolongan tak kunjung datang",
     },
     {
-        "id":"08",
+        "id":"8",
         "judul":"Ketika melihat sekelompok orang Kafir",
     },
     {
-        "id":"09",
+        "id":"9",
         "judul":"Semboyan kaum Muslimin terhadap orang-orang Kafir yang mengatur siasat di Malam hari",
     },
     {
@@ -126,5 +126,5 @@
     {
         "id":"32",
         "judul":"Doa untuk orang yang keluar Berjihad di jalan Allah",
-    },
+    }
 ]
