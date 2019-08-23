@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+    Alert,
     Dimensions,
     FlatList,
     Clipboard,
@@ -17,7 +18,7 @@ export default class DetailDoa extends Component
     constructor(props){
         super(props);
         this.state  = {
-            status: true,
+
         };
     }
 
@@ -35,12 +36,41 @@ export default class DetailDoa extends Component
     id      = this.props.navigation.getParam('itemId');
     index   = parseInt(this.id) - 1;
     data    = DataDoa[this.index];
-    text    = this.data.judul + '\n \n' + this.data.arab + '\n \n' + this.data.arti;
+    text    = this.data.judul + '\n \n' + this.data.arab + '\n \n' + this.data.arti + '\n \n' + this.data.dalil;
+    carab   = this.data.arab;
+    carti   = this.data.arti;
+    cdalil  = this.data.dalil;
 
     copy(){
         Clipboard.setString(this.text);
-        alert('Doa tersalin ke Clipboard');
-
+        Alert.alert(
+            'Salin Doa',
+            'Doa berhasil di salin',
+        );
+        this.hideMenu();
+    }
+    cpArab(){
+        Clipboard.setString(this.carab);
+        Alert.alert(
+            'Salin Arab',
+            'Arab berhasil di salin',
+        );
+        this.hideMenu();
+    }
+    cpArti(){
+        Clipboard.setString(this.carti);
+        Alert.alert(
+            'Salin Terjemahan',
+            'Terjemahan berhasil di salin'
+        );
+        this.hideMenu();
+    }
+    cpDalil(){
+        Clipboard.setString(this.cdalil);
+        Alert.alert(
+            'Salin Dalil',
+            'Dalil berhasil di salin'
+        );
         this.hideMenu();
     }
 
@@ -54,6 +84,7 @@ export default class DetailDoa extends Component
               getItemLayout={(doa, index)=>(
                   {length: Dimensions.get('window').width, offset: Dimensions.get('window').width * index, index}
               )}
+              initialNumToRender={3}
               initialScrollIndex={index}
               horizontal={true}
               pagingEnabled={true}
@@ -80,7 +111,16 @@ export default class DetailDoa extends Component
                                      }
                                  >
                                      <MenuItem onPress={()=>this.copy()} >
-                                         Salin
+                                         Salin Doa
+                                     </MenuItem>
+                                     <MenuItem onPress={()=>this.cpArab()} >
+                                         Salin Arab
+                                     </MenuItem>
+                                     <MenuItem onPress={()=>this.cpArti()} >
+                                         Salin Terjemahan
+                                     </MenuItem>
+                                     <MenuItem onPress={()=>this.cpDalil()} >
+                                         Salin Dalil
                                      </MenuItem>
                                  </Menu>
                              </Button>
@@ -98,7 +138,7 @@ export default class DetailDoa extends Component
                                   </Body>
                               </CardItem>
                               <CardItem footer bordered style={{flex: 1,justifyContent: 'center',alignItems: 'center',}}>
-                                  <Text style={{textAlign: 'center', color: '#388e3c'}}>{DataDoa[index].dalil}</Text>
+                                  <Text style={{textAlign: 'center', color: '#388e3c'}}>{doa.item.dalil}</Text>
                               </CardItem>
                           </Card>
                       </ScrollView>
