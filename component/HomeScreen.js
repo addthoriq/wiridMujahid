@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import {StatusBar,Text,Image,FlatList,TouchableOpacity,ScrollView,Dimensions,Animated,View,StyleSheet} from 'react-native';
 import DaftarIsi from '../data/DaftarIsi.json';
 
-HEADER_MAX_HEIGHT           = 150
-HEADER_MIN_HEIGHT           = 50
+HEADER_MAX_HEIGHT           = 250
+HEADER_MIN_HEIGHT           = 100
 
 export default class HomeScreen extends Component
 {
     constructor(props){
         super(props);
         this.state={
-            scrollY : new Animated.Value(0)
+            scrollY : new Animated.Value(0),
         }
     }
 
@@ -37,7 +37,7 @@ export default class HomeScreen extends Component
         const {navigation}  = this.props;
       return (
         <View style={{flex: 1, backgroundColor: '#e5e5e5'}}>
-            <StatusBar backgroundColor="green"/>
+            <StatusBar backgroundColor="green" hidden/>
             <Animated.View
                 style={{
                     position: 'absolute',
@@ -49,9 +49,14 @@ export default class HomeScreen extends Component
                     zIndex: headerZindex,
                     elevation: headerZindex,
                 }}>
-                <Animated.View style={{position: 'absolute', bottom: 0}}>
-                    <Text style={s.naps}>Wirid Keselamatan</Text>
-                </Animated.View>
+                    <Image
+                        style={{flex: 1,width: null,alignSelf: 'stretch',opacity: 0.3}}
+                        source={require('../img/masjidil_haram.jpg')}
+                    />
+                    <Animated.View style={{flex: 1,position: 'absolute', bottom: 0}}>
+                        <Text style={s.nap}>دعاء سلامة للمسلمين</Text>
+                        <Text style={s.naps}>Doa Keselamatan untuk Kaum Muslimin</Text>
+                    </Animated.View>
             </Animated.View>
 
             <ScrollView
@@ -68,7 +73,7 @@ export default class HomeScreen extends Component
                     renderItem={ (daftar) => (
                         <TouchableOpacity
                             style={s.fl}
-                            onPress={()=>this.props.navigation.navigate('Detail',{itemId:daftar.item.id})}
+                            onPress={()=>this.props.navigation.navigate('Detail',{pageId:daftar.item.id})}
                         >
                             <View style={s.id}>
                                 <Text style={{fontSize: 20,textAlign: 'center',color: '#fff'}}>{daftar.item.id}</Text>
@@ -86,15 +91,24 @@ export default class HomeScreen extends Component
 }
 
 const s = StyleSheet.create({
+    nap:{
+        marginLeft: 5,
+        marginBottom: 0,
+        fontSize: 26,
+        fontWeight: 'bold',
+        color: '#fff',
+        textAlign: 'left',
+    },
     naps:{
         marginLeft: 5,
-        marginBottom: 10,
-        fontSize: 24,
+        marginBottom: 15,
+        fontSize: 18,
         fontWeight: 'bold',
         color: '#fff',
     },
     vfl:{
-        marginTop: 155,
+        marginTop: 255,
+        marginBottom: 5,
         marginHorizontal: 5,
     },
     fl:{

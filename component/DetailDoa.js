@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
-import {
-    Alert,
-    Dimensions,
-    FlatList,
-    Clipboard,
-    TouchableOpacity,
-    View,
-    ScrollView,
-    StyleSheet,
-} from 'react-native';
+import {StatusBar,Alert,Dimensions,FlatList,Clipboard,TouchableOpacity,View,ScrollView,StyleSheet,} from 'react-native';
 import {Header,Title,Left,Right,Card,CardItem,Button,Body,Icon,Text} from 'native-base';
 import Menu, {MenuItem, MenuDivider} from 'react-native-material-menu';
 import DataDoa from '../data/DataDoa.json';
@@ -33,7 +24,7 @@ export default class DetailDoa extends Component
         this._menu.show();
     };
 
-    id      = this.props.navigation.getParam('itemId');
+    id      = this.props.navigation.getParam('pageId');
     index   = parseInt(this.id) - 1;
     data    = DataDoa[this.index];
     text    = this.data.judul + '\n \n' + this.data.arab + '\n \n' + this.data.arti + '\n \n' + this.data.dalil;
@@ -90,6 +81,7 @@ export default class DetailDoa extends Component
               pagingEnabled={true}
               renderItem={(doa)=>(
                   <View style={{width: Dimensions.get('window').width, backgroundColor: '#e5e5e5'}}>
+                      <StatusBar hidden={false}/>
                      <Header style={{backgroundColor: '#4caf50'}} androidStatusBarColor="green">
                          <Left>
                              <Button transparent onPress={()=>this.props.navigation.goBack()}>
@@ -106,7 +98,7 @@ export default class DetailDoa extends Component
                                      button=
                                      {
                                          <TouchableOpacity onPress={this.showMenu}>
-                                             <Icon name="more" style={{fontSize: 24}} />
+                                             <Icon name="more" style={{fontSize: 26}} />
                                          </TouchableOpacity>
                                      }
                                  >

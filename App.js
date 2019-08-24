@@ -3,10 +3,14 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 import HomeScreen from './component/HomeScreen';
 import DetailDoa from './component/DetailDoa';
 import AboutScreen from './component/AboutScreen';
+import AwalScreen from './component/AwalScreen';
 
 const a = createStackNavigator({
     Home: {
         screen: HomeScreen
+    },
+    Awal:{
+        screen: AwalScreen
     },
     Detail: {
         screen: DetailDoa
