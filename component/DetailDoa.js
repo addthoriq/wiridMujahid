@@ -79,6 +79,7 @@ export default class DetailDoa extends Component
               initialScrollIndex={index}
               horizontal={true}
               pagingEnabled={true}
+              showsHorizontalScrollIndicator={false}
               renderItem={(doa)=>(
                   <View style={{width: Dimensions.get('window').width, backgroundColor: '#e5e5e5'}}>
                       <StatusBar hidden={false}/>

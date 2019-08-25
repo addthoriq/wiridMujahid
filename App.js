@@ -9,14 +9,14 @@ const a = createStackNavigator({
     Home: {
         screen: HomeScreen
     },
+    About:{
+        screen: AboutScreen
+    },
     Awal:{
         screen: AwalScreen
     },
     Detail: {
         screen: DetailDoa
-    },
-    About:{
-        screen: AboutScreen
     },
 },{
     defaultNavigationOptions:{
