@@ -53,7 +53,7 @@ export default class HomeScreen extends Component
                       }}>
                           <Image
                               style={{flex: 1,width: null,alignSelf: 'stretch',opacity: 0.2}}
-                              source={require('../img/smp.jpg')}
+                              source={require('../assets/img/smp.jpg')}
                           />
                           <Animated.View style={{flex: 1,position: 'absolute', bottom: 0}}>
                               <Text style={s.nap}>Tentang Aplikasi</Text>
@@ -71,7 +71,7 @@ export default class HomeScreen extends Component
                       <View style={s.fl}>
                           <View style={{flex: 1,justifyContent: 'center', alignItems: 'center'}}>
                               <Image
-                                  source={require('../img/logo_utama.png')}
+                                  source={require('../assets/img/logo_utama.png')}
                                   style={{width: 125, height: 125}}
                               />
                           </View>

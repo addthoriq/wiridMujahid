@@ -15,13 +15,13 @@ export default class AwalScreen extends Component
                 <StatusBar hidden/>
                 <View style={{flex: 4, justifyContent: 'center', alignItems: 'center',}}>
                     <Image
-                        source={require('../img/logo_utama.png')}
+                        source={require('../assets/img/logo_utama.png')}
                         style={{width: 150, height: 150}}
                     />
                 </View>
                 <View style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
                     <Image
-                        source={require('../img/Pita_web_logo-1.png')}
+                        source={require('../assets/img/Pita_web_logo-1.png')}
                         style={{width: '60%', height: '30%'}}
                     />
                 </View>

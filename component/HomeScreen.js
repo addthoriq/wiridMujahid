@@ -53,7 +53,7 @@ export default class HomeScreen extends Component
                       }}>
                           <Image
                               style={{flex: 1,width: null,alignSelf: 'stretch',opacity: 0.3}}
-                              source={require('../img/masjidil_haram.jpg')}
+                              source={require('../assets/img/masjidil_haram.jpg')}
                           />
                           <Animated.View style={{flex: 1,position: 'absolute', bottom: 0}}>
                               <Text style={s.nap}>دعاء سلامة للمسلمين</Text>
