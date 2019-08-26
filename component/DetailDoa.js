@@ -6,12 +6,6 @@ import DataDoa from '../data/DataDoa.json';
 
 export default class DetailDoa extends Component
 {
-    constructor(props){
-        super(props);
-        this.state  = {
-
-        };
-    }
 
     _menu       = null;
     setMenuRef  = ref => {
@@ -94,7 +88,6 @@ export default class DetailDoa extends Component
                          <Right>
                              <Button transparent>
                                  <Menu
-                                     style={{flex: 1}}
                                      ref={this.setMenuRef}
                                      button=
                                      {
@@ -144,7 +137,7 @@ export default class DetailDoa extends Component
 
 const s = StyleSheet.create({
     arb:{
-        fontSize: 28,
+        fontSize: 32,
         textAlign: 'center',
         marginVertical: 15,
         fontFamily: 'Scheherazade',
@@ -153,6 +146,7 @@ const s = StyleSheet.create({
         fontStyle: 'italic',
         fontSize: 16,
         marginTop: 10,
-        textAlign: 'justify'
+        textAlign: 'justify',
+        fontFamily: 'SourceSansPro',
     }
 });
