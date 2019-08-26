@@ -75,7 +75,6 @@ export default class DetailDoa extends Component
               getItemLayout={(doa, index)=>(
                   {length: Dimensions.get('window').width, offset: Dimensions.get('window').width * index, index}
               )}
-              initialNumToRender={3}
               initialScrollIndex={index}
               horizontal={true}
               pagingEnabled={true}
@@ -95,6 +94,7 @@ export default class DetailDoa extends Component
                          <Right>
                              <Button transparent>
                                  <Menu
+                                     style={{flex: 1}}
                                      ref={this.setMenuRef}
                                      button=
                                      {
@@ -119,7 +119,7 @@ export default class DetailDoa extends Component
                              </Button>
                          </Right>
                      </Header>
-                      <ScrollView pagingEnabled={true}>
+                      <ScrollView>
                           <Card>
                               <CardItem header bordered style={{flex: 1,justifyContent: 'center',alignItems: 'center',}}>
                                   <Text style={{textAlign: 'center', color: '#388e3c'}}>{doa.item.judul}</Text>
