@@ -115,7 +115,7 @@ export default class DetailDoa extends Component
                       <ScrollView>
                           <Card>
                               <CardItem header bordered style={{flex: 1,justifyContent: 'center',alignItems: 'center',}}>
-                                  <Text style={{textAlign: 'center', color: '#388e3c'}}>{doa.item.judul}</Text>
+                                  <Text style={{textAlign: 'center', color: '#388e3c',fontFamily: 'SourceSansPro',}}>{doa.item.judul}</Text>
                               </CardItem>
                               <CardItem>
                                   <Body style={{justifyContent: 'center',alignItems: 'center',}}>
@@ -124,7 +124,7 @@ export default class DetailDoa extends Component
                                   </Body>
                               </CardItem>
                               <CardItem footer bordered style={{flex: 1,justifyContent: 'center',alignItems: 'center',}}>
-                                  <Text style={{textAlign: 'center', color: '#388e3c'}}>{doa.item.dalil}</Text>
+                                  <Text style={{textAlign: 'center', color: '#388e3c',fontFamily: 'SourceSansPro',}}>{doa.item.dalil}</Text>
                               </CardItem>
                           </Card>
                       </ScrollView>

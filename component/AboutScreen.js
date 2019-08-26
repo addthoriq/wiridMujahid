@@ -76,15 +76,15 @@ export default class HomeScreen extends Component
                               />
                           </View>
                           <View style={{flex: 1,justifyContent: 'center', alignItems: 'center'}}>
-                              <Text style={{fontSize: 16, fontWeight: 'bold', marginTop: 20}}>
+                              <Text style={{fontFamily: 'SourceSansPro',fontSize: 16, fontWeight: 'bold', marginTop: 20}}>
                                   Doa Keselamatan untuk kaum Muslimin
                               </Text>
-                              <Text style={{fontSize: 14, textAlign: 'center',marginBottom: 20}}>
-                                  By: Muhammad Rizqy Ath-Thaariq, Rekoso lek mangsamu gampang-_-
+                              <Text style={{fontFamily: 'SourceSansPro',fontSize: 14, textAlign: 'center',marginBottom: 20}}>
+                                  By: Muhammad Rizqy Ath-Thaariq. Santri Umar asal Samarinda, DKI Kaltim
                               </Text>
                           </View>
                           <View style={{flex: 1,justifyContent: 'center', alignItems: 'center'}}>
-                              <Text style={{textAlign: 'justify',fontSize: 14, marginTop: 20}}>
+                              <Text style={{textAlign: 'justify',fontFamily: 'SourceSansPro',fontSize: 14, marginTop: 20}}>
                                   Aplikasi ini bersumber pada kitab "Adzkarud Jihad wad Du'a 'alal Kuffar Ash-Shahihah" karya Wa'il Ad-Dasuqy dan sudah ada versi Terjemahan bahasa Indonesia dengan judul "Wirid Mujahid: Handbook Mujahid di segala cuaca" diterbitkan oleh Penerbit Jazera pada tahun 2009.
                               </Text>
                               <Text style={s.prg}>
@@ -115,34 +115,34 @@ export default class HomeScreen extends Component
                           <List style={{marginBottom: 10}}>
                               <ListItem icon>
                                   <Left>
-                                      <Icon name="mail" style={{fontSize: 18}}/>
+                                      <Icon name="mail" style={{fontFamily: 'SourceSansPro',fontSize: 18}}/>
                                   </Left>
                                   <Body>
-                                      <Text style={{fontSize: 14,}}>pondokitalmadinah@gmail.com</Text>
+                                      <Text style={{fontFamily: 'SourceSansPro',fontSize: 14,}}>pondokitalmadinah@gmail.com</Text>
                                   </Body>
                               </ListItem>
                               <ListItem icon>
                                   <Left>
-                                      <Icon name="logo-wordpress" style={{fontSize: 18}}/>
+                                      <Icon name="logo-wordpress" style={{fontFamily: 'SourceSansPro',fontSize: 18}}/>
                                   </Left>
                                   <Body>
-                                      <Text style={{fontSize: 14,}}>http://pondokinformatika.com</Text>
+                                      <Text style={{fontFamily: 'SourceSansPro',fontSize: 14,}}>http://pondokinformatika.com</Text>
                                   </Body>
                               </ListItem>
                               <ListItem icon>
                                   <Left>
-                                      <Icon name="call" style={{fontSize: 18}}/>
+                                      <Icon name="call" style={{fontFamily: 'SourceSansPro',fontSize: 18}}/>
                                   </Left>
                                   <Body>
-                                      <Text style={{fontSize: 12,}}>0857 2524 9265 / 0822 5718 2656 (Irhamullah)</Text>
+                                      <Text style={{fontFamily: 'SourceSansPro',fontSize: 12,}}>0857 2524 9265 / 0822 5718 2656 (Irhamullah)</Text>
                                   </Body>
                               </ListItem>
                               <ListItem icon>
                                   <Left>
-                                      <Icon name="home" style={{fontSize: 18}}/>
+                                      <Icon name="home" style={{fontFamily: 'SourceSansPro',fontSize: 18}}/>
                                   </Left>
                                   <Body>
-                                      <Text style={{fontSize: 11,}}>Jl. Raya Krapyak RT.05, Karanganyar, Wedomartani, Ngemplak, Sleman, Daerah Istimewa Yogyakarta</Text>
+                                      <Text style={{fontFamily: 'SourceSansPro',fontSize: 11,}}>Jl. Raya Krapyak RT.05, Karanganyar, Wedomartani, Ngemplak, Sleman, Daerah Istimewa Yogyakarta</Text>
                                   </Body>
                               </ListItem>
                           </List>
@@ -158,7 +158,7 @@ const s = StyleSheet.create({
     nap:{
         marginLeft: 10,
         marginBottom: 15,
-        fontSize: 24,
+        fontFamily: 'SourceSansPro',fontSize: 24,
         fontWeight: 'bold',
         color: '#fff',
         textAlign: 'left',
@@ -173,7 +173,7 @@ const s = StyleSheet.create({
     },
     prg:{
         textAlign: 'justify',
-        fontSize: 14,
+        fontFamily: 'SourceSansPro',fontSize: 14,
         marginTop: 10
     },
     lst:{
@@ -181,11 +181,11 @@ const s = StyleSheet.create({
         marginBottom: 20,
         color: '#2196f3',
         textDecorationLine: 'underline',
-        fontSize: 14,
+        fontFamily: 'SourceSansPro',fontSize: 14,
     },
     ttl:{
         marginTop: 20,
-        fontSize: 14,
+        fontFamily: 'SourceSansPro',fontSize: 14,
         fontWeight: 'bold',
     },
     nme:{

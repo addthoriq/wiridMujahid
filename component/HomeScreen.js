@@ -140,5 +140,6 @@ const s = StyleSheet.create({
     jdl:{
         margin: 5,
         width: '80%',
+        fontFamily: 'SourceSansPro',
     }
 });

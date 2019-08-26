@@ -13,7 +13,7 @@ export default class AwalScreen extends Component
         return (
             <View style={s.c}>
                 <StatusBar hidden/>
-                <View style={{flex: 4, justifyContent: 'center', alignItems: 'center',}}>
+                <View style={{flex: 4, justifyContent: 'center', alignItems: 'center', marginTop: 70}}>
                     <Image
                         source={require('../assets/img/logo_utama.png')}
                         style={{width: 150, height: 150}}

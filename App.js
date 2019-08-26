@@ -3,7 +3,7 @@ import {createStackNavigator, createAppContainer} from 'react-navigation';
 import HomeScreen from './component/HomeScreen';
 import DetailDoa from './component/DetailDoa';
 import AboutScreen from './component/AboutScreen';
-import AwalScreen from './component/AwalScreen';
+import SplashScreen from 'react-native-splash-screen';
 
 const a = createStackNavigator({
     Home: {
@@ -11,9 +11,6 @@ const a = createStackNavigator({
     },
     About:{
         screen: AboutScreen
-    },
-    Awal:{
-        screen: AwalScreen
     },
     Detail: {
         screen: DetailDoa
@@ -26,6 +23,11 @@ const a = createStackNavigator({
 const Ap = createAppContainer(a);
 export default class App extends Component
 {
+    componentDidMount() {
+    	// do stuff while splash screen is shown
+        // After having done stuff (such as async tasks) hide the splash screen
+        SplashScreen.hide();
+    }
     render() {
       return (
         <Ap />
