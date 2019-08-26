@@ -144,9 +144,10 @@ export default class DetailDoa extends Component
 
 const s = StyleSheet.create({
     arb:{
-        fontSize: 20,
+        fontSize: 28,
         textAlign: 'center',
         marginVertical: 15,
+        fontFamily: 'Scheherazade',
     },
     art:{
         fontStyle: 'italic',
