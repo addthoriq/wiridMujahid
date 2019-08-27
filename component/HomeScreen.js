@@ -80,10 +80,10 @@ export default class HomeScreen extends Component
                                   onPress={()=>this.props.navigation.navigate('Detail',{pageId:daftar.item.id})}
                               >
                                   <View style={s.id}>
-                                      <Text style={{fontSize: 20,textAlign: 'center',color: '#fff'}}>{daftar.item.id}</Text>
+                                      <Text style={{fontFamily: 'SourceSansPro',fontSize: 20,textAlign: 'center',color: '#fff'}}>{daftar.item.id}</Text>
                                   </View>
                                   <View style={s.jdl}>
-                                      <Text style={{textAlign: 'justify',fontSize: 16,}}>{daftar.item.judul}</Text>
+                                      <Text style={{textAlign: 'justify',fontFamily: 'SourceSansPro',fontSize: 16,}}>{daftar.item.judul}</Text>
                                   </View>
                               </TouchableOpacity>
                           )}
@@ -103,6 +103,7 @@ const s = StyleSheet.create({
     nap:{
         marginLeft: 10,
         marginBottom: 0,
+        fontFamily: 'SourceSansPro',
         fontSize: 26,
         fontWeight: 'bold',
         color: '#fff',
@@ -111,8 +112,8 @@ const s = StyleSheet.create({
     naps:{
         marginLeft: 10,
         marginBottom: 15,
+        fontFamily: 'SourceSansPro_bold',
         fontSize: 18,
-        fontWeight: 'bold',
         color: '#fff',
     },
     vfl:{
@@ -140,6 +141,5 @@ const s = StyleSheet.create({
     jdl:{
         margin: 5,
         width: '80%',
-        fontFamily: 'SourceSansPro',
     }
 });

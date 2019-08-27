@@ -1,22 +1,12 @@
 import React, { Component } from 'react';
 import {StatusBar,Alert,Dimensions,FlatList,Clipboard,TouchableOpacity,View,ScrollView,StyleSheet,} from 'react-native';
 import {Header,Title,Left,Right,Card,CardItem,Button,Body,Icon,Text} from 'native-base';
-import Menu, {MenuItem, MenuDivider} from 'react-native-material-menu';
 import DataDoa from '../data/DataDoa.json';
+import OptionMenu from './layouts/OptionMenu';
+import {Menu,MenuOptions,MenuOption,MenuTrigger,} from 'react-native-popup-menu';
 
 export default class DetailDoa extends Component
 {
-
-    _menu       = null;
-    setMenuRef  = ref => {
-        this._menu  = ref;
-    };
-    hideMenu    = () => {
-        this._menu.hide();
-    };
-    showMenu    = () => {
-        this._menu.show();
-    };
 
     id      = this.props.navigation.getParam('pageId');
     index   = parseInt(this.id) - 1;
@@ -32,7 +22,6 @@ export default class DetailDoa extends Component
             'Salin Doa',
             'Doa berhasil di salin',
         );
-        this.hideMenu();
     }
     cpArab(){
         Clipboard.setString(this.carab);
@@ -40,7 +29,6 @@ export default class DetailDoa extends Component
             'Salin Arab',
             'Arab berhasil di salin',
         );
-        this.hideMenu();
     }
     cpArti(){
         Clipboard.setString(this.carti);
@@ -48,7 +36,6 @@ export default class DetailDoa extends Component
             'Salin Terjemahan',
             'Terjemahan berhasil di salin'
         );
-        this.hideMenu();
     }
     cpDalil(){
         Clipboard.setString(this.cdalil);
@@ -56,7 +43,6 @@ export default class DetailDoa extends Component
             'Salin Dalil',
             'Dalil berhasil di salin'
         );
-        this.hideMenu();
     }
 
     render() {
@@ -86,30 +72,25 @@ export default class DetailDoa extends Component
                              <Title>Doa ke {doa.item.id}</Title>
                          </Body>
                          <Right>
-                             <Button transparent>
-                                 <Menu
-                                     ref={this.setMenuRef}
-                                     button=
-                                     {
-                                         <TouchableOpacity onPress={this.showMenu}>
-                                             <Icon name="more" style={{fontSize: 26}} />
-                                         </TouchableOpacity>
-                                     }
-                                 >
-                                     <MenuItem onPress={()=>this.copy()} >
-                                         Salin Doa
-                                     </MenuItem>
-                                     <MenuItem onPress={()=>this.cpArab()} >
-                                         Salin Arab
-                                     </MenuItem>
-                                     <MenuItem onPress={()=>this.cpArti()} >
-                                         Salin Terjemahan
-                                     </MenuItem>
-                                     <MenuItem onPress={()=>this.cpDalil()} >
-                                         Salin Dalil
-                                     </MenuItem>
-                                 </Menu>
-                             </Button>
+                             <Menu>
+                                <MenuTrigger style={{paddingHorizontal: 15, marginHorizontal: 0}}>
+                                    <Icon name="more" style={{color: '#fff',fontWeight: 'bold',fontSize: 30}} />
+                                </MenuTrigger>
+                                <MenuOptions>
+                                    <MenuOption onSelect={()=>this.copy()} >
+                                        <Text style={s.pop} >Salin Doa</Text>
+                                    </MenuOption>
+                                    <MenuOption onSelect={()=>this.cpArab()} >
+                                        <Text style={s.pop} >Salin Arab</Text>
+                                    </MenuOption>
+                                    <MenuOption onSelect={()=>this.cpArti()} >
+                                        <Text style={s.pop} >Salin Terjemahan</Text>
+                                    </MenuOption>
+                                    <MenuOption onSelect={()=>this.cpDalil()} >
+                                        <Text style={s.pop} >Salin Dalil</Text>
+                                    </MenuOption>
+                                </MenuOptions>
+                             </Menu>
                          </Right>
                      </Header>
                       <ScrollView>
@@ -147,6 +128,11 @@ const s = StyleSheet.create({
         fontSize: 16,
         marginTop: 10,
         textAlign: 'justify',
-        fontFamily: 'SourceSansPro',
-    }
+        fontFamily: 'SourceSansPro_italic',
+    },
+    pop:{
+        fontSize: 15,
+        marginVertical: 7,
+        fontFamily: 'SourceSansPro'
+    },
 });

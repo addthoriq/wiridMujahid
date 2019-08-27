@@ -4,16 +4,17 @@ import HomeScreen from './component/HomeScreen';
 import DetailDoa from './component/DetailDoa';
 import AboutScreen from './component/AboutScreen';
 import SplashScreen from 'react-native-splash-screen';
+import { MenuProvider } from 'react-native-popup-menu';
 
 const a = createStackNavigator({
     Home: {
         screen: HomeScreen
     },
-    About:{
-        screen: AboutScreen
-    },
     Detail: {
         screen: DetailDoa
+    },
+    About:{
+        screen: AboutScreen
     },
 },{
     defaultNavigationOptions:{
@@ -30,7 +31,9 @@ export default class App extends Component
     }
     render() {
       return (
-        <Ap />
+          <MenuProvider>
+            <Ap />
+          </MenuProvider>
       );
     }
 }
