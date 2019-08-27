@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {createStackNavigator, createAppContainer} from 'react-navigation';
 import HomeScreen from './component/HomeScreen';
-import DetailDoa from './component/DetailDoa';
+import DetailDoa from './component/DetailDoa2';
 import AboutScreen from './component/AboutScreen';
 import SplashScreen from 'react-native-splash-screen';
 import { MenuProvider } from 'react-native-popup-menu';

@@ -9,36 +9,50 @@ export default class DetailDoa extends Component
 {
 
     id      = this.props.navigation.getParam('pageId');
-    index   = parseInt(this.id) - 1;
+    index   = this.id - 1;
     data    = DataDoa[this.index];
     text    = this.data.judul + '\n \n' + this.data.arab + '\n \n' + this.data.arti + '\n \n' + this.data.dalil;
     carab   = this.data.arab;
     carti   = this.data.arti;
     cdalil  = this.data.dalil;
 
-    copy(){
-        Clipboard.setString(this.text);
+    cpAll = async (abc) => {
+        const data    = DataDoa[parseInt(abc) - 1];
+        const atext    = data.judul + '\n \n' + data.arab + '\n \n' + data.arti + '\n \n' + data.dalil;
+        const carab   = data.arab;
+        const carti   = data.arti;
+        const cdalil  = data.dalil;
+        await Clipboard.setString(atext);
         Alert.alert(
             'Salin Doa',
             'Doa berhasil di salin',
         );
-    }
-    cpArab(){
-        Clipboard.setString(this.carab);
+    };
+
+    cpArab = async (abc) => {
+        const data    = DataDoa[parseInt(abc) - 1];
+        const carab   = data.arab;
+        await Clipboard.setString(carab);
         Alert.alert(
             'Salin Arab',
             'Arab berhasil di salin',
         );
     }
-    cpArti(){
-        Clipboard.setString(this.carti);
+
+    cpArti = async (abc) => {
+        const data  = DataDoa[parseInt(abc) - 1];
+        const carti = data.arti;
+        await Clipboard.setString(carti);
         Alert.alert(
             'Salin Terjemahan',
             'Terjemahan berhasil di salin'
         );
     }
-    cpDalil(){
-        Clipboard.setString(this.cdalil);
+
+    cpDalil = async (abc) => {
+        const data  = DataDoa[parseInt(abc) - 1];
+        const cdalil = data.dalil;
+        await Clipboard.setString(cdalil);
         Alert.alert(
             'Salin Dalil',
             'Dalil berhasil di salin'
@@ -77,16 +91,16 @@ export default class DetailDoa extends Component
                                     <Icon name="more" style={{color: '#fff',fontWeight: 'bold',fontSize: 30}} />
                                 </MenuTrigger>
                                 <MenuOptions>
-                                    <MenuOption onSelect={()=>this.copy()} >
+                                    <MenuOption onSelect={() => this.cpAll(doa.item.id)} >
                                         <Text style={s.pop} >Salin Doa</Text>
                                     </MenuOption>
-                                    <MenuOption onSelect={()=>this.cpArab()} >
+                                    <MenuOption onSelect={()=>this.cpArab(doa.item.id)} >
                                         <Text style={s.pop} >Salin Arab</Text>
                                     </MenuOption>
-                                    <MenuOption onSelect={()=>this.cpArti()} >
+                                    <MenuOption onSelect={()=>this.cpArti(doa.item.id)} >
                                         <Text style={s.pop} >Salin Terjemahan</Text>
                                     </MenuOption>
-                                    <MenuOption onSelect={()=>this.cpDalil()} >
+                                    <MenuOption onSelect={()=>this.cpDalil(doa.item.id)} >
                                         <Text style={s.pop} >Salin Dalil</Text>
                                     </MenuOption>
                                 </MenuOptions>
