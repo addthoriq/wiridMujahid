@@ -62,6 +62,7 @@ export default class HomeScreen extends Component
                   </Animated.View>
 
                   <ScrollView
+                      showsVerticalScrollIndicator={false}
                       scrollEventThrottle={16}
                       style={{flex: 1}}
                       onScroll={Animated.event(

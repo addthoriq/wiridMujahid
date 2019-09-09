@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {StatusBar,Text,Image,FlatList,TouchableOpacity,ScrollView,Dimensions,Animated,View,StyleSheet} from 'react-native';
+import {Tab, Tabs, ScrollableTab, FooterTab, Button, Icon} from 'native-base';
+import _ from 'lodash';
 import AboutScreen from './AboutScreen';
 import DaftarIsi from '../data/DaftarIsi.json';
 
@@ -12,7 +14,16 @@ export default class HomeScreen extends Component
         super(props);
         this.state={
             scrollY : new Animated.Value(0),
+            gif     : true,
         }
+    }
+
+    componentDidMount(){
+        _.delay(()=>{
+            this.setState({
+                gif: false
+            })
+        },4000)
     }
 
     render() {
@@ -37,7 +48,7 @@ export default class HomeScreen extends Component
         })
         const {navigation}  = this.props;
       return (
-          <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
+          <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={true} showsVerticalScrollIndicator={false}>
               <View style={{flex: 1, backgroundColor: '#e5e5e5',width: Dimensions.get('window').width}}>
                   <StatusBar backgroundColor="green" hidden/>
                   <Animated.View
@@ -63,6 +74,7 @@ export default class HomeScreen extends Component
                   </Animated.View>
 
                   <ScrollView
+                      showsVerticalScrollIndicator={false}
                       scrollEventThrottle={16}
                       style={{flex: 1}}
                       onScroll={Animated.event(
@@ -89,6 +101,14 @@ export default class HomeScreen extends Component
                           )}
                       />
                   </ScrollView>
+                  {
+                      this.state.gif ?
+                      <Image
+                          style={{right: 0,position: 'absolute', width: 100, height: 100}}
+                          source={require('../assets/img/swiperght.gif')}
+                      />
+                      :null
+                  }
               </View>
               <View style={{flex: 1, backgroundColor: '#e5e5e5',width: Dimensions.get('window').width}}>
                   <StatusBar backgroundColor="green" hidden/>
