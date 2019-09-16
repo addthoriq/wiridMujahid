@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StatusBar,Alert,Dimensions,FlatList,Clipboard,TouchableOpacity,View,ScrollView,StyleSheet,} from 'react-native';
+import {BackHandler,StatusBar,Alert,Dimensions,FlatList,Clipboard,TouchableOpacity,View,ScrollView,StyleSheet,} from 'react-native';
 import {Header,Title,Left,Right,Card,CardItem,Button,Body,Icon,Text} from 'native-base';
 import DataDoa from '../data/DataDoa.json';
 import OptionMenu from './layouts/OptionMenu';
@@ -7,6 +7,24 @@ import {Menu,MenuOptions,MenuOption,MenuTrigger,} from 'react-native-popup-menu'
 
 export default class DetailDoa extends Component
 {
+
+    constructor(props){
+        super(props);
+        this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
+    }
+
+    componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
+    }
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
+    }
+
+    handleBackButtonClick() {
+        this.props.navigation.goBack(null);
+        return true;
+    }
 
     id      = this.props.navigation.getParam('pageId');
     index   = this.id - 1;
@@ -88,10 +106,14 @@ export default class DetailDoa extends Component
                              <Title>Doa ke {doa.item.id}</Title>
                          </Body>
                          <Right>
+
+                             {/* MENU DROPDOWN */}
                              <Menu>
                                 <MenuTrigger style={{paddingHorizontal: 15, marginHorizontal: 0}}>
                                     <Icon name="more" style={{color: '#fff',fontWeight: 'bold',fontSize: 30}} />
                                 </MenuTrigger>
+
+                                {/* ISI DROPDOWN */}
                                 <MenuOptions>
                                     <MenuOption onSelect={() => this.cpAll(doa.item.id)} >
                                         <Text style={s.pop} >Salin Doa</Text>
@@ -106,9 +128,11 @@ export default class DetailDoa extends Component
                                         <Text style={s.pop} >Salin Dalil</Text>
                                     </MenuOption>
                                 </MenuOptions>
+
                              </Menu>
                          </Right>
                      </Header>
+
                       <ScrollView>
                           <Card>
                               <CardItem header bordered style={{flex: 1,justifyContent: 'center',alignItems: 'center',}}>
@@ -144,7 +168,7 @@ const s = StyleSheet.create({
         fontSize: 16,
         marginTop: 10,
         textAlign: 'justify',
-        fontFamily: 'SourceSansPro_italic',
+        fontFamily: 'SourceSansPro',
     },
     pop:{
         fontSize: 15,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {StatusBar,Image,FlatList,TouchableOpacity,ScrollView,Dimensions,Animated,View,StyleSheet} from 'react-native';
+import {BackHandler,StatusBar,Image,FlatList,TouchableOpacity,ScrollView,Dimensions,Animated,View,StyleSheet} from 'react-native';
 import {List,ListItem,Text,Left,Body,Icon} from 'native-base';
 import DaftarIsi from '../data/DaftarIsi.json';
 
@@ -35,7 +35,7 @@ export default class HomeScreen extends Component
             outputRange: [-50, -50, -50, 0],
             extrapolate: 'clamp'
         })
-        const {navigation}  = this.props;
+        const {tombol,navigation}  = this.props;
       return (
           <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={false} showsVerticalScrollIndicator={false}>
               <View style={{flex: 1, backgroundColor: '#e5e5e5',width: Dimensions.get('window').width}}>
@@ -48,13 +48,18 @@ export default class HomeScreen extends Component
                           right: 0,
                           backgroundColor: '#4caf50',
                           height: headerHeight,
-                          zIndex: headerZindex,
+                          zIndex: 100,
                           elevation: headerZindex,
                       }}>
                           <Image
                               style={{flex: 1,width: null,alignSelf: 'stretch',opacity: 0.2}}
                               source={require('../assets/img/smp.jpg')}
                           />
+                          <Animated.View style={{flex: 1,position: 'absolute',left: 0,}}>
+                              <TouchableOpacity style={{margin: 5, padding: 5}} onPress={tombol}>
+                                  <Icon name="home" style={{fontSize: 30,color: '#fff'}}/>
+                              </TouchableOpacity>
+                          </Animated.View>
                           <Animated.View style={{fontFamily: 'SourceSansPro',flex: 1,position: 'absolute', bottom: 0}}>
                               <Text style={s.nap}>Tentang Aplikasi</Text>
                           </Animated.View>
@@ -140,7 +145,7 @@ export default class HomeScreen extends Component
                                       <Icon name="call" style={s.ico}/>
                                   </Left>
                                   <Body>
-                                      <Text style={{fontFamily: 'SourceSansPro',fontSize: 13,}}>0857 2524 9265 / 0822 5718 2656 (Irhamullah)</Text>
+                                      <Text style={{fontFamily: 'SourceSansPro',fontSize: 13,}}>0857 2524 9265 (Irhamullah)</Text>
                                   </Body>
                               </ListItem>
                               <ListItem icon>
